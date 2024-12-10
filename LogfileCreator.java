@@ -65,5 +65,15 @@ public class LogfileCreator
         int minute = rand.nextInt(60);
         return new LogEntry(year, month, day, hour, minute);
     }
+    
+    public static void main(String[] args) {
+        LogfileCreator creator = new LogfileCreator();
+        boolean result = creator.createFile("logfile-2015-to-2019.txt",5000);
+        if (result) {
+            System.out.println("Log file created successfully!");
+        } else {
+            System.out.println("Failed to create log file.");
+        }
+    }
 
 }
